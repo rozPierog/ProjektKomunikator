@@ -1,3 +1,3 @@
 # Mobile
 
-Folder for mobile application
+Directory for mobile application

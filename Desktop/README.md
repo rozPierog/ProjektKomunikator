@@ -1,3 +1,3 @@
 # Desktop
 
-Folder for Desktop application files
+Directory for Desktop application files

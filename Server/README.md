@@ -1,3 +1,3 @@
 # Server
 
-Folder for server app
+Directory for server app

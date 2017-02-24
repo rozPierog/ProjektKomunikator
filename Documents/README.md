@@ -1,3 +1,3 @@
 # Documents
 
-Folder for all documentantion and general paperwork
+Directory for all documentantion and general paperwork
