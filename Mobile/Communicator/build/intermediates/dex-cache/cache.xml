@@ -3,30 +3,12 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="7dee7bd0f526ea9eb33af8fc2ce149cf48cff311">
-        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_6e90f9fd79b0b8e8c96c2b0e3cd33e9dfd1f4b1a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="4ed59988537e234aaa4c21153488e85b65abc52e">
         <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_2881fee085aff011b7854088fd9a5448376c2eda\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
-        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.2.0_27ded269ea65def20a77f49887760af7f5d563a4\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -48,48 +30,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="f45e373cf0f7f25ff9a0cc30ffa84efdbd82e9f5">
-        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_9a7c4175b86b9638ca41ead8ec95db118049512e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\exploded-aar\com.android.support\transition\25.2.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="e51c2f662bb72419632af5192553c37e33890a99">
         <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-transition-25.2.0_23c3f513804b867aeace42de42ac76344f82e03b\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.2.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.2.0_4a3348af0408927cc1a92c0852dc561dc9b3524e.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\exploded-aar\com.android.support\design\25.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ea6a989b83d19b1b461281e0475a6cd6514897f8">
-        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-25.2.0_828792f71d43847cacbab1e2c0a1794ec43810fa\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
-        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.2.0_b379505b9f14cc05fb53c10cca894a7dcde42686\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -129,42 +75,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="810f41e5b7fd99f196ebeabe865ba2c54e7e76dc">
-        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.2.0_a1d991dd7fb543ad8b09702065dc4c58a5ceb232\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
-        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.2.0_0f8836a4defeaf468644a718a930ed072084600e\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.2.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="702d339bc0a81d21354cd7e2cf2b67225fa4a16c">
-        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-25.2.0_f67c2747b8221878c99058c07272d259443a9fec.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\exploded-aar\com.android.support\transition\25.2.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e51c2f662bb72419632af5192553c37e33890a99">
-        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\pre-dexed\debug\com.android.support-transition-25.2.0_23c3f513804b867aeace42de42ac76344f82e03b.jar" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.2.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -198,6 +108,186 @@
         revision="25.0.2"
         sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
         <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.2.0_c919524d6bfa2084083ddc49c719465e202d96eb\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
+        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.2.0_0f8836a4defeaf468644a718a930ed072084600e.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
+        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.2.0_90897a54cc16e17338661c28beb2d1e4bdf62619\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\exploded-aar\com.android.support\design\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ea6a989b83d19b1b461281e0475a6cd6514897f8">
+        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-25.2.0_1a7db7feee2ade17ea14fee71ad1e8e79153ecbd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
+        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.2.0_314b21a2b629d87139baac714cb9a47d6cb636d0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="152de8da301561dcb0946471697a420d8f7a68c5">
+        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-25.2.0_4afcce60993f47b5a9cd6e6352a238fbb018ee8e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rozpi\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\25.2.0\support-annotations-25.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
+        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.2.0_3eeea8731dee9739c429b4ffe1a28a17670c8a33\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cb454b52545859ed2f24a6c01366805b0fa04b22">
+        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.2.0_a4fffb1f2ae5fbf1ce4984fd1e44e5b84ed4b373\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
+        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.2.0_105db03cf748d1a65522e3e512bf5a92680d6866\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
+        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.2.0_e75df46e6e7d6a0cfad840aa6fdfe0b4dc5d67a9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="810f41e5b7fd99f196ebeabe865ba2c54e7e76dc">
+        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.2.0_320b12f12e7d3f21716f33204e9db555b01759c7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="319c4966df4f5b001715f8aa08990c7b82e62b0d">
+        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_6e90f9fd79b0b8e8c96c2b0e3cd33e9dfd1f4b1a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
+        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.2.0_27ded269ea65def20a77f49887760af7f5d563a4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f45e373cf0f7f25ff9a0cc30ffa84efdbd82e9f5">
+        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_9a7c4175b86b9638ca41ead8ec95db118049512e\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.2.0_4a3348af0408927cc1a92c0852dc561dc9b3524e.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\exploded-aar\com.android.support\design\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ea6a989b83d19b1b461281e0475a6cd6514897f8">
+        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-25.2.0_828792f71d43847cacbab1e2c0a1794ec43810fa\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
+        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.2.0_b379505b9f14cc05fb53c10cca894a7dcde42686\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="810f41e5b7fd99f196ebeabe865ba2c54e7e76dc">
+        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.2.0_a1d991dd7fb543ad8b09702065dc4c58a5ceb232\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
+        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.2.0_0f8836a4defeaf468644a718a930ed072084600e\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="702d339bc0a81d21354cd7e2cf2b67225fa4a16c">
+        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-25.2.0_f67c2747b8221878c99058c07272d259443a9fec.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\exploded-aar\com.android.support\transition\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e51c2f662bb72419632af5192553c37e33890a99">
+        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\pre-dexed\debug\com.android.support-transition-25.2.0_23c3f513804b867aeace42de42ac76344f82e03b.jar" />
     </item>
     <item
         is-multidex="true"
@@ -237,66 +327,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.2.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
-        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.2.0_0f8836a4defeaf468644a718a930ed072084600e.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
-        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.2.0_90897a54cc16e17338661c28beb2d1e4bdf62619\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\exploded-aar\com.android.support\design\25.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ea6a989b83d19b1b461281e0475a6cd6514897f8">
-        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-25.2.0_1a7db7feee2ade17ea14fee71ad1e8e79153ecbd\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
-        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.2.0_314b21a2b629d87139baac714cb9a47d6cb636d0\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
         jar="C:\Users\rozpi\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\25.2.0\support-annotations-25.2.0.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
         <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\pre-dexed\debug\support-annotations-25.2.0_3eeea8731dee9739c429b4ffe1a28a17670c8a33.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="152de8da301561dcb0946471697a420d8f7a68c5">
-        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-25.2.0_4afcce60993f47b5a9cd6e6352a238fbb018ee8e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\rozpi\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\25.2.0\support-annotations-25.2.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
-        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.2.0_3eeea8731dee9739c429b4ffe1a28a17670c8a33\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -313,7 +349,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="5f5a457fb46c8c259228d2a703276cb0991e528b">
+        sha1="ee949a256f55f354e15b899a0c07ab2ccb2af0ce">
         <dex dex="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_f8b0e5a1b778a901984e990ca208fb793050aba4\classes.dex" />
     </item>
     <item
@@ -324,24 +360,6 @@
         revision="25.0.2"
         sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
         <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.2.0_e75df46e6e7d6a0cfad840aa6fdfe0b4dc5d67a9.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="cb454b52545859ed2f24a6c01366805b0fa04b22">
-        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.2.0_a4fffb1f2ae5fbf1ce4984fd1e44e5b84ed4b373\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
-        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.2.0_105db03cf748d1a65522e3e512bf5a92680d6866\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -360,24 +378,6 @@
         revision="25.0.2"
         sha1="cb454b52545859ed2f24a6c01366805b0fa04b22">
         <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-25.2.0_a4fffb1f2ae5fbf1ce4984fd1e44e5b84ed4b373.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
-        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.2.0_e75df46e6e7d6a0cfad840aa6fdfe0b4dc5d67a9\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="810f41e5b7fd99f196ebeabe865ba2c54e7e76dc">
-        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.2.0_320b12f12e7d3f21716f33204e9db555b01759c7\classes.dex" />
     </item>
 
 </items>
