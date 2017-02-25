@@ -75,7 +75,8 @@ public class MainActivity extends AppCompatActivity {
             clipboardManager.setPrimaryClip(clipData);
             Toast.makeText(getApplicationContext(),R.string.copied,Toast.LENGTH_SHORT).show();
         } else if(item.getTitle().equals(getString(R.string.delete))) {
-
+            messageList.remove(info.position);
+            messageAdapter.notifyDataSetChanged();
             Toast.makeText(getApplicationContext(),R.string.deleted,Toast.LENGTH_SHORT).show();
         } else return false;
         return true;
