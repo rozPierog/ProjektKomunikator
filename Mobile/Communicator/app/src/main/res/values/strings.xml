@@ -3,6 +3,12 @@
     <string name="sendButton">Send!</string>
     <string name="messageBox">Dew it!</string>
     <string name="title_activity_login">Sign in</string>
+    <string name="copy">Copy</string>
+    <string name="delete">Delete</string>
+    <string name="copied">Copied</string>
+    <string name="deleted">Deleted</string>
+    <string name="copy_label">Copied From List</string>
+
 
     <!-- Strings related to login -->
     <string name="prompt_email">Nick</string>
