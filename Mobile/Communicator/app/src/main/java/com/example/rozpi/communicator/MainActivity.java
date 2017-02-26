@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     EditText messageBox;
 
     String name;
+    String longName;
     String message;
 
     ArrayList<Message> messageList = new ArrayList<>();
@@ -42,25 +43,17 @@ public class MainActivity extends AppCompatActivity {
 
         Intent loginIntent = getIntent();
         name = loginIntent.getStringExtra(LoginActivity.NICK);
+        if(name.length()>7) {
+            longName = name.substring(0, 3)+"..."+name.charAt(name.length()-1);
+        }
         registerForContextMenu(messageView);
-//        Button lpCopy = (Button)findViewById(R.id.longpressCopy);
-//        Button lpDelete = (Button)findViewById(R.id.longpressDelete);
-//        registerForContextMenu(lpCopy);
-//        registerForContextMenu(lpDelete);
-
-//        messageView.setOnLongClickListener(new View.OnLongClickListener() {
-//            @Override
-//            public boolean onLongClick(View v) {
-//
-//                return false;
-//            }
-//        });
 
     }
 
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
+        menu.setHeaderTitle(name);
         menu.add(Menu.NONE, v.getId(), 0, R.string.copy);
         menu.add(Menu.NONE, v.getId(), 0, R.string.delete);
     }
@@ -89,4 +82,6 @@ public class MainActivity extends AppCompatActivity {
         messageAdapter.notifyDataSetChanged();
         messageBox.setText("");
     }
+
+
 }

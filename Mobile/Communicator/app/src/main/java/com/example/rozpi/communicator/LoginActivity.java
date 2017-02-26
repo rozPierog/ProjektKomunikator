@@ -20,7 +20,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void onLogin(View v) {
-        loginIntent = new Intent(this, MainActivity.class);
+        loginIntent = new Intent(LoginActivity.this, MainActivity.class);
         loginIntent.putExtra(NICK,etNick.getText().toString());
         startActivity(loginIntent);
     }
