@@ -8,6 +8,7 @@
     <string name="copied">Copied</string>
     <string name="deleted">Deleted</string>
     <string name="copy_label">Copied From List</string>
+    <string name="no_nick">Tell me your name!</string>
 
 
     <!-- Strings related to login -->
