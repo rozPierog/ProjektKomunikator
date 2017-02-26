@@ -15,7 +15,10 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<Message> messageList = new ArrayList<>();
     MessageAdapter messageAdapter;
 
+    DateFormat dateFormat;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
         messageBox = (EditText)findViewById(R.id.messageBox);
         messageView = (ListView) findViewById(R.id.messageList);
         messageView.setAdapter(messageAdapter);
+
+        dateFormat = new SimpleDateFormat("HH:mm:ss");
 
         Intent loginIntent = getIntent();
         name = loginIntent.getStringExtra(LoginActivity.NICK);
@@ -74,7 +81,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void onSend(View v) {
         message = messageBox.getText().toString();
-        Message tempMessage = new Message(name, message);
+        String date = dateFormat.format(Calendar.getInstance().getTime());
+        Message tempMessage = new Message(name, message, date);
         messageList.add(tempMessage);
         messageAdapter.notifyDataSetChanged();
         messageBox.setText("");

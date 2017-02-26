@@ -9,6 +9,9 @@
     <string name="deleted">Deleted</string>
     <string name="copy_label">Copied From List</string>
     <string name="no_nick">Tell me your name!</string>
+    <string name="timestamp">Timestamp</string>
+    <string name="sender_name">Nick</string>
+    <string name="message">Message</string>
 
 
     <!-- Strings related to login -->

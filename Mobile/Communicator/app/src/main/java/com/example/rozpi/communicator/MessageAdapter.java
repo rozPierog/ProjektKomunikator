@@ -32,12 +32,14 @@ class MessageAdapter extends ArrayAdapter<Message> {
         }
         Button senderName = (Button) convertView.findViewById(R.id.senderName);
         TextView tvMessages = (TextView) convertView.findViewById(R.id.message);
+        TextView tvTime = (TextView) convertView.findViewById(R.id.tvTime);
         if(message.sender.length()>7) {
             longName = message.sender.substring(0, 3)+"..."+message.sender.charAt(message.sender.length()-1);
             senderName.setText(longName);
         }else senderName.setText(message.sender);
 
         tvMessages.setText(message.message);
+        tvTime.setText(message.timestamp);
 
 
 
