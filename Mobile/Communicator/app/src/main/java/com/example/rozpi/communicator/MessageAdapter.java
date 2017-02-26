@@ -1,7 +1,7 @@
 package com.example.rozpi.communicator;
 
 import android.content.Context;
-
+import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,22 +11,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.List;
 
-/**
- * Created by rozpi on 24.02.2017.
- */
 
-public class MessageAdapter extends ArrayAdapter<Message> {
+class MessageAdapter extends ArrayAdapter<Message> {
 
-    public MessageAdapter(Context context, ArrayList<Message> mess) {
+    MessageAdapter(Context context, ArrayList<Message> mess) {
         super(context, 0, mess);
     }
-    Message message;
+    private Message message;
 
-
+    @NonNull
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, @NonNull ViewGroup parent) {
 
         message = getItem(position);
         String longName;
