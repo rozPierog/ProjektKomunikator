@@ -1,9 +1,11 @@
 package com.example.rozpi.communicator;
 
+import android.content.BroadcastReceiver;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.ContextMenu;
@@ -22,6 +24,7 @@ import java.net.Socket;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
 
     DateFormat dateFormat;
 
+    private static final String TAG = "MainActivity";
+    Intent recive;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +53,8 @@ public class MainActivity extends AppCompatActivity {
         messageBox = (EditText)findViewById(R.id.messageBox);
         messageView = (ListView) findViewById(R.id.messageList);
         messageView.setAdapter(messageAdapter);
-
+        socket = SocketHandler.getSocket();
+        recive = new Intent(getApplicationContext(),ServerReceive.class);
 
         dateFormat = new SimpleDateFormat("HH:mm:ss");
 
@@ -70,6 +77,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+
 
 
     @Override
@@ -99,15 +108,42 @@ public class MainActivity extends AppCompatActivity {
 
     public void onSend(View v) {
         message = messageBox.getText().toString();
-//        String date = dateFormat.format(Calendar.getInstance().getTime());
-//        Message tempMessage = new Message(name, message, date);
-//        new ServerConnect(true, message, null).execute();
-//        messageList.add(tempMessage);
-//        messageAdapter.notifyDataSetChanged();
-        new ServerConnect(true,message,SocketHandler.getSocket()).execute();
+        new ServerConnect(true, message, socket).execute();
         messageBox.setText("");
 
+        getApplicationContext().startService(recive);
     }
+
+
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        startService(recive);
+        registerReceiver(broadcastReceiver, new IntentFilter(ServerReceive.BROADCAST_ACTION));
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        unregisterReceiver(broadcastReceiver);
+        stopService(recive);
+    }
+
+    private void onReceiveMessage(Intent intent) {
+        String date = dateFormat.format(Calendar.getInstance().getTime());
+        message = intent.getStringExtra("message");
+        Message tempMessage = new Message("Ktoś", message, date);
+        messageList.add(tempMessage);
+        messageAdapter.notifyDataSetChanged();
+    }
+
+    private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            onReceiveMessage(intent);
+        }
+    };
 
 
 }

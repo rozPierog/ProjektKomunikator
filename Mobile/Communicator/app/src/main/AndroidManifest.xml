@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <service
+            android:name=".ServerReceive"
+            android:exported="false"/>
+
         <activity
             android:name=".LoginActivity"
             android:screenOrientation="portrait">
