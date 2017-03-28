@@ -1,9 +1,11 @@
 package com.example.rozpi.communicator;
 
+import android.content.BroadcastReceiver;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.ContextMenu;
@@ -18,6 +20,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.net.Socket;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -31,11 +34,17 @@ public class MainActivity extends AppCompatActivity {
     String name;
     String longName;
     String message;
+    String[] messageFromIntent;
 
     ArrayList<Message> messageList = new ArrayList<>();
     MessageAdapter messageAdapter;
 
+    Socket socket;
+
     DateFormat dateFormat;
+
+    private static final String TAG = "MainActivity";
+    Intent recive;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,11 +54,16 @@ public class MainActivity extends AppCompatActivity {
         messageBox = (EditText)findViewById(R.id.messageBox);
         messageView = (ListView) findViewById(R.id.messageList);
         messageView.setAdapter(messageAdapter);
+        socket = SocketHandler.getSocket();
+        recive = new Intent(getApplicationContext(),ServerReceive.class);
 
         dateFormat = new SimpleDateFormat("HH:mm:ss");
 
         Intent loginIntent = getIntent();
         name = loginIntent.getStringExtra(LoginActivity.NICK);
+
+        SocketHandler.setNick(name);
+
         if(name.length()>7) {
             longName = name.substring(0, 3)+"..."+name.charAt(name.length()-1);
         }
@@ -69,10 +83,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
+
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
-        menu.setHeaderTitle(name);
+        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) menuInfo;
+
+        menu.setHeaderTitle(messageAdapter.getItem(info.position).getSender());
         menu.add(Menu.NONE, v.getId(), 0, R.string.copy);
         menu.add(Menu.NONE, v.getId(), 0, R.string.delete);
     }
@@ -96,11 +114,59 @@ public class MainActivity extends AppCompatActivity {
 
     public void onSend(View v) {
         message = messageBox.getText().toString();
+        new ServerConnect(true, message, socket).execute();
+        messageBox.setText("");
+
+        getApplicationContext().startService(recive);
+    }
+
+
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        startService(recive);
+        registerReceiver(broadcastReceiver, new IntentFilter(ServerReceive.BROADCAST_ACTION));
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+       // unregisterReceiver(broadcastReceiver);
+        //stopService(recive);
+    }
+
+    private void onReceiveMessage(Intent intent) {
         String date = dateFormat.format(Calendar.getInstance().getTime());
-        Message tempMessage = new Message(name, message, date);
+        message = intent.getStringExtra("message");
+        messageFromIntent = new String[2];
+        messageFromIntent = message.split(" ", 2);
+        Message tempMessage;
+        if(!(messageFromIntent[0].equals("LOGIN"))) {
+            tempMessage = new Message(messageFromIntent[0], messageFromIntent[1], date);
+        } else {
+            tempMessage = new Message("Server", messageFromIntent[1], date);
+        }
         messageList.add(tempMessage);
         messageAdapter.notifyDataSetChanged();
-        messageBox.setText("");
+        scrollMyListViewToBottom();
+    }
+
+    private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            onReceiveMessage(intent);
+        }
+    };
+
+    private void scrollMyListViewToBottom() {
+        messageView.post(new Runnable() {
+            @Override
+            public void run() {
+                // Select the last row so it will scroll into view...
+                messageView.setSelection(messageAdapter.getCount() - 1);
+            }
+        });
     }
 
 

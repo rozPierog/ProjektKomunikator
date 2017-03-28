@@ -2,14 +2,25 @@ package com.example.rozpi.communicator;
 
 
 
-public class Message {
+class Message {
 
     String sender;
     String message;
     String timestamp;
 
+    String getSender() {
+        return sender;
+    }
 
-    public Message(String sender, String message, String timestamp) {
+    public String getMessage() {
+        return message;
+    }
+
+    public String getTimestamp() {
+        return timestamp;
+    }
+
+    Message(String sender, String message, String timestamp) {
         this.sender = sender;
         this.message = message;
         this.timestamp = timestamp;
