@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     String name;
     String longName;
     String message;
+    String[] messageFromIntent;
 
     ArrayList<Message> messageList = new ArrayList<>();
     MessageAdapter messageAdapter;
@@ -60,6 +61,9 @@ public class MainActivity extends AppCompatActivity {
 
         Intent loginIntent = getIntent();
         name = loginIntent.getStringExtra(LoginActivity.NICK);
+
+        SocketHandler.setNick(name);
+
         if(name.length()>7) {
             longName = name.substring(0, 3)+"..."+name.charAt(name.length()-1);
         }
@@ -84,7 +88,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
-        menu.setHeaderTitle(name);
+        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) menuInfo;
+
+        menu.setHeaderTitle(messageAdapter.getItem(info.position).getSender());
         menu.add(Menu.NONE, v.getId(), 0, R.string.copy);
         menu.add(Menu.NONE, v.getId(), 0, R.string.delete);
     }
@@ -126,16 +132,24 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onPause() {
         super.onPause();
-        unregisterReceiver(broadcastReceiver);
-        stopService(recive);
+       // unregisterReceiver(broadcastReceiver);
+        //stopService(recive);
     }
 
     private void onReceiveMessage(Intent intent) {
         String date = dateFormat.format(Calendar.getInstance().getTime());
         message = intent.getStringExtra("message");
-        Message tempMessage = new Message("Ktoś", message, date);
+        messageFromIntent = new String[2];
+        messageFromIntent = message.split(" ", 2);
+        Message tempMessage;
+        if(!(messageFromIntent[0].equals("LOGIN"))) {
+            tempMessage = new Message(messageFromIntent[0], messageFromIntent[1], date);
+        } else {
+            tempMessage = new Message("Server", messageFromIntent[1], date);
+        }
         messageList.add(tempMessage);
         messageAdapter.notifyDataSetChanged();
+        scrollMyListViewToBottom();
     }
 
     private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
@@ -144,6 +158,16 @@ public class MainActivity extends AppCompatActivity {
             onReceiveMessage(intent);
         }
     };
+
+    private void scrollMyListViewToBottom() {
+        messageView.post(new Runnable() {
+            @Override
+            public void run() {
+                // Select the last row so it will scroll into view...
+                messageView.setSelection(messageAdapter.getCount() - 1);
+            }
+        });
+    }
 
 
 }

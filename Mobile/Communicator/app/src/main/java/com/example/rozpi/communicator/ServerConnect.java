@@ -10,10 +10,10 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 /**
- * Created by rozpi on 26.03.2017.
+ * Created by Marcin Omelan on 26.03.2017.
  */
 
-public class ServerConnect extends AsyncTask<String, Void, Void> {
+class ServerConnect extends AsyncTask<String, Void, Void> {
 
 
     private String serverIP = "10.0.2.2";
@@ -39,7 +39,7 @@ public class ServerConnect extends AsyncTask<String, Void, Void> {
                     new OutputStreamWriter(client.getOutputStream())),
                     true);
             if(message)
-                out.println(toServer);
+                out.println(SocketHandler.getNick() +" "+ toServer);
             else
                 out.println("LOGIN "+ toServer);
             Log.e("SOCKET", "Success");
