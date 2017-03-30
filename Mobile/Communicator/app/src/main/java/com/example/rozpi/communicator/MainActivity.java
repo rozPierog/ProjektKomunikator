@@ -124,7 +124,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void onSend(View v) {
         message = messageBox.getText().toString();
-        new ServerConnect(true, message, socket).execute();
+        if (!message.isEmpty()) {
+            new ServerConnect(true, message, socket).execute();
+        } else {
+            Toast.makeText(getApplicationContext(), "You cannot send empty msg", Toast.LENGTH_SHORT).show();
+        }
         messageBox.setText("");
 
         getApplicationContext().startService(recive);
