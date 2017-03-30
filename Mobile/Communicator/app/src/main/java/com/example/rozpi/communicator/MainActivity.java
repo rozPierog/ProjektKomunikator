@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
         registerReceiver(broadcastReceiver, new IntentFilter(ServerReceive.BROADCAST_ACTION));
         BackgroundHandler.activityResumed();
         messageView.setAdapter(messageAdapter);
-        manager.cancel(0);
+        manager.cancelAll();
 
     }
 

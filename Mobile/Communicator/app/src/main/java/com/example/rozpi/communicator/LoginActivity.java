@@ -41,29 +41,36 @@ public class LoginActivity extends AppCompatActivity {
         new SocketConnect().execute();
 
 
+
+
     }
 
 
     public void onLogin(View v) {
-        nick = etNick.getText().toString();
+        if(SocketHandler.getSocket()!=null)
+        {
+            nick = etNick.getText().toString();
 
-        if (nick.isEmpty()) {
-            Toast.makeText(LoginActivity.this,R.string.no_nick,Toast.LENGTH_SHORT).show();
-        }else {
-            if (nick.contains(" ")){
-                Toast.makeText(LoginActivity.this,R.string.nick_space,Toast.LENGTH_SHORT).show();
+            if (nick.isEmpty()) {
+                Toast.makeText(LoginActivity.this, R.string.no_nick, Toast.LENGTH_SHORT).show();
             } else {
-                loginIntent = new Intent(LoginActivity.this, MainActivity.class);
-                loginIntent.putExtra(NICK, nick);
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("Nick", nick);
-                editor.apply();
-                Log.w("SharedPref", nick);
+                if (nick.contains(" ")) {
+                    Toast.makeText(LoginActivity.this, R.string.nick_space, Toast.LENGTH_SHORT).show();
+                } else {
+                    loginIntent = new Intent(LoginActivity.this, MainActivity.class);
+                    loginIntent.putExtra(NICK, nick);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("Nick", nick);
+                    editor.apply();
+                    Log.w("SharedPref", nick);
 
-                socket = SocketHandler.getSocket();
-                new ServerConnect(false, nick, socket).execute();
-                startActivity(loginIntent);
+                    socket = SocketHandler.getSocket();
+                    new ServerConnect(false, nick, socket).execute();
+                    startActivity(loginIntent);
+                }
             }
+        } else {
+            Toast.makeText(LoginActivity.this, "No Connection To a Server", Toast.LENGTH_SHORT).show();
         }
     }
 
