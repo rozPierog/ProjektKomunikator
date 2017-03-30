@@ -156,15 +156,11 @@ public class MainActivity extends AppCompatActivity {
         messageFromIntent = new String[2];
         messageFromIntent = message.split(" ", 2);
         Message tempMessage;
-        if(!(messageFromIntent[0].equals("LOGIN"))) {
-            tempMessage = new Message(messageFromIntent[0], messageFromIntent[1], date);
-        } else {
-            tempMessage = new Message("Server", messageFromIntent[1], date);
-        }
+        tempMessage = new Message("Nick", message,date);
         messageList.add(tempMessage);
         messageAdapter.notifyDataSetChanged();
         scrollMyListViewToBottom();
-        sendNotif(messageFromIntent);
+        sendNotif(message);
     }
 
     private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
@@ -184,12 +180,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void sendNotif(String[] nameMessage) {
+    public void sendNotif(String nameMessage) {
         NotificationCompat.Builder mBuilder =
                 new NotificationCompat.Builder(this)
                         .setSmallIcon(R.drawable.notif_icon)
-                        .setContentTitle(nameMessage[0])
-                        .setContentText(nameMessage[1]);
+                        .setContentTitle("Czyjś Nick")
+                        .setContentText(nameMessage);
         Intent notificationIntent = new Intent(this, EmptyActivity.class);
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT);

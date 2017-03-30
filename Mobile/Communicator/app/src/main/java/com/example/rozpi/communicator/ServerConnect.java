@@ -16,8 +16,6 @@ import java.net.Socket;
 class ServerConnect extends AsyncTask<String, Void, Void> {
 
 
-    private String serverIP = "10.0.2.2";
-    private Integer serverPort = 3000;
     private Socket client;
     private String toServer;
     private Boolean message;
