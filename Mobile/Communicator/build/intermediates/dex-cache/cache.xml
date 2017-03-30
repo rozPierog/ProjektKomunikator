@@ -12,120 +12,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\rozpi\.android\build-cache\82fafd420252a22726776645c4160b6957d8879a\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
-        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_ce88a1417ea601f7ed37682e02373395f8a51c2d\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\rozpi\.android\build-cache\ad251205fb3e965f0313b4ef097c4bd3832d803a\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
-        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_4e086b4731b849d292905f45fdc0a3a93cb87687\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\rozpi\.android\build-cache\5ab9d3375895c20a99a950f61a5c181b4efa63b8\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
-        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_2ab1bc2e5bcedfbe97354c7f33bca30357bb36d8\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\rozpi\.android\build-cache\b15fc6ffbd4d8df4449b9b4a769256a077c5a29a\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
-        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_4b02406de9aa00c039fc0d1b24c6718314529e73\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\rozpi\.android\build-cache\1df0ef4fdb6c361b21910113cd4c3e4317064d8f\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="810f41e5b7fd99f196ebeabe865ba2c54e7e76dc">
-        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_9c354593fdee151c503ed89db2d93d54a09ce759\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\rozpi\.android\build-cache\808faa492fa8b8fa50cf5bc086aa2e2091084e38\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="cb454b52545859ed2f24a6c01366805b0fa04b22">
-        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_403d6611e964c87695fa720e73b7f802630d9bd5\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\rozpi\.android\build-cache\dc5e4f4c5e2b8e31b33995b41a6d5bcd62dccdd6\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="702d339bc0a81d21354cd7e2cf2b67225fa4a16c">
-        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_8730aefd615922c2b9f12907432da0a17a1cf1cb\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\rozpi\.android\build-cache\b10970829763ba117b2ea542e631141f0fd5fe62\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e51c2f662bb72419632af5192553c37e33890a99">
-        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_4f4c76f502a61dd1a551ae520f204c75921b63ce\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\rozpi\.android\build-cache\4ac78a09d8038bd985ef3238ebae448418779a81\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
-        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_32be82f6088b32aba51ef9207f448035273ed758\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\rozpi\.android\build-cache\25500ac99fa7a1e535c0d605fe1f1f6702f854c1\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a66e69ce3a9b4b9f93db9093910b4ae8e9003ee5\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\rozpi\.android\build-cache\9de9fd0f2c9ecee93fa0fee0551078c8c979b6e5\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ea6a989b83d19b1b461281e0475a6cd6514897f8">
-        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_ec6d8de1dcf514190c6ec5694cbc676160a02c1a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="166ca77ef9f083e45e7386142ddfd5814e47f133">
+        sha1="78b635d5b809ed418a26243497b1f8f89837dbc3">
         <dex dex="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_f8b0e5a1b778a901984e990ca208fb793050aba4\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\rozpi\.android\build-cache\509118b8dafebc89605408bbc74822ff79431f5e\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="152de8da301561dcb0946471697a420d8f7a68c5">
-        <dex dex="C:\Users\rozpi\AndroidStudioProjects\Mobile\Mobile\Communicator\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d3631cb9f311950ae80da0147a8a9016c6f87749\classes.dex" />
     </item>
 
 </items>
