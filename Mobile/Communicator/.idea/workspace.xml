@@ -10,12 +10,8 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a4ca168-6436-4263-b664-fab15cb075a1" name="Default" comment="Working with remote server">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/mockable-android-25.jar" afterPath="$PROJECT_DIR$/build/generated/mockable-android-25.jar" />
+    <list default="true" id="8a4ca168-6436-4263-b664-fab15cb075a1" name="Default" comment="Toast if server isn't running/socket was not created">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/rozpi/communicator/LoginActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/rozpi/communicator/LoginActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/rozpi/communicator/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/rozpi/communicator/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
     </list>
     <ignored path="Communicator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1989,7 +1985,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -2457,7 +2453,14 @@
       <option name="project" value="LOCAL" />
       <updated>1490891149706</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Toast if server isn't running/socket was not created">
+      <created>1490891750280</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1490891750280</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2531,7 +2534,8 @@
     <MESSAGE value="Change of Text size in MainActivity, and temporary workaround for names." />
     <MESSAGE value="Added Notifications if the app is in the background" />
     <MESSAGE value="Working with remote server" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working with remote server" />
+    <MESSAGE value="Toast if server isn't running/socket was not created" />
+    <option name="LAST_COMMIT_MESSAGE" value="Toast if server isn't running/socket was not created" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
