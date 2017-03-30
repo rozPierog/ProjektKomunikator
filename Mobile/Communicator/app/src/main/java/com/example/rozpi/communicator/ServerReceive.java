@@ -82,4 +82,6 @@ public class ServerReceive extends IntentService {
         super.onDestroy();
     }
 
+
+
 }

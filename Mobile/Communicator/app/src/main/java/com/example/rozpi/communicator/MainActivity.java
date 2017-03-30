@@ -1,12 +1,16 @@
 package com.example.rozpi.communicator;
 
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.ContextMenu;
 import android.view.KeyEvent;
@@ -39,11 +43,15 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<Message> messageList = new ArrayList<>();
     MessageAdapter messageAdapter;
 
+    SharedPreferences sharedPreferences;
+
+    NotificationManager manager;
+
     Socket socket;
 
     DateFormat dateFormat;
 
-    private static final String TAG = "MainActivity";
+
     Intent recive;
 
     @Override
@@ -57,13 +65,15 @@ public class MainActivity extends AppCompatActivity {
         socket = SocketHandler.getSocket();
         recive = new Intent(getApplicationContext(),ServerReceive.class);
 
+        manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         dateFormat = new SimpleDateFormat("HH:mm:ss");
 
         Intent loginIntent = getIntent();
         name = loginIntent.getStringExtra(LoginActivity.NICK);
 
         SocketHandler.setNick(name);
-
+        sharedPreferences = getApplicationContext().getSharedPreferences("Nick",Context.MODE_PRIVATE);
+        name = sharedPreferences.getString("Nick", "");
         if(name.length()>7) {
             longName = name.substring(0, 3)+"..."+name.charAt(name.length()-1);
         }
@@ -127,13 +137,17 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         startService(recive);
         registerReceiver(broadcastReceiver, new IntentFilter(ServerReceive.BROADCAST_ACTION));
+        BackgroundHandler.activityResumed();
+        messageView.setAdapter(messageAdapter);
+        manager.cancel(0);
+
     }
 
     @Override
     public void onPause() {
         super.onPause();
-       // unregisterReceiver(broadcastReceiver);
-        //stopService(recive);
+        BackgroundHandler.activityPaused();
+
     }
 
     private void onReceiveMessage(Intent intent) {
@@ -150,6 +164,7 @@ public class MainActivity extends AppCompatActivity {
         messageList.add(tempMessage);
         messageAdapter.notifyDataSetChanged();
         scrollMyListViewToBottom();
+        sendNotif(messageFromIntent);
     }
 
     private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
@@ -167,6 +182,23 @@ public class MainActivity extends AppCompatActivity {
                 messageView.setSelection(messageAdapter.getCount() - 1);
             }
         });
+    }
+
+    public void sendNotif(String[] nameMessage) {
+        NotificationCompat.Builder mBuilder =
+                new NotificationCompat.Builder(this)
+                        .setSmallIcon(R.drawable.notif_icon)
+                        .setContentTitle(nameMessage[0])
+                        .setContentText(nameMessage[1]);
+        Intent notificationIntent = new Intent(this, EmptyActivity.class);
+        PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT);
+        mBuilder.setContentIntent(contentIntent);
+
+        // Add as notification
+        if(!BackgroundHandler.isActivityVisible())
+            manager.notify(0, mBuilder.build());
+
     }
 
 
