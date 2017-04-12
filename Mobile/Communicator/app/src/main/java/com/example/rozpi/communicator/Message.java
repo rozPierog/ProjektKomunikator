@@ -4,9 +4,10 @@ package com.example.rozpi.communicator;
 
 class Message {
 
-    String sender;
-    String message;
-    String timestamp;
+    String sender = "No Nick";
+    String message = "No Message";
+    String timestamp = "No Time";
+
 
     String getSender() {
         return sender;

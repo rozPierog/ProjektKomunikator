@@ -32,27 +32,22 @@ import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
-    ListView messageView;
-    EditText messageBox;
+    private ListView messageView;
+    private EditText messageBox;
 
-    String name;
-    String longName;
-    String message;
-    String[] messageFromIntent;
+    private String message;
 
-    ArrayList<Message> messageList = new ArrayList<>();
-    MessageAdapter messageAdapter;
+    private ArrayList<Message> messageList = new ArrayList<>();
+    private MessageAdapter messageAdapter;
 
-    SharedPreferences sharedPreferences;
+    private NotificationManager manager;
 
-    NotificationManager manager;
+    private Socket socket;
 
-    Socket socket;
-
-    DateFormat dateFormat;
+    private DateFormat dateFormat;
 
 
-    Intent recive;
+    Intent receiveMSG;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,19 +58,19 @@ public class MainActivity extends AppCompatActivity {
         messageView = (ListView) findViewById(R.id.messageList);
         messageView.setAdapter(messageAdapter);
         socket = SocketHandler.getSocket();
-        recive = new Intent(getApplicationContext(),ServerReceive.class);
+        receiveMSG = new Intent(getApplicationContext(),ServerReceive.class);
 
         manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         dateFormat = new SimpleDateFormat("HH:mm:ss");
 
         Intent loginIntent = getIntent();
-        name = loginIntent.getStringExtra(LoginActivity.NICK);
+        String name = loginIntent.getStringExtra(LoginActivity.NICK);
 
         SocketHandler.setNick(name);
-        sharedPreferences = getApplicationContext().getSharedPreferences("Nick",Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("Nick", Context.MODE_PRIVATE);
         name = sharedPreferences.getString("Nick", "");
         if(name.length()>7) {
-            longName = name.substring(0, 3)+"..."+name.charAt(name.length()-1);
+            String longName = name.substring(0, 3) + "..." + name.charAt(name.length() - 1);
         }
         registerForContextMenu(messageView);
 
@@ -127,13 +122,13 @@ public class MainActivity extends AppCompatActivity {
     public void onSend(View v) {
         message = messageBox.getText().toString();
         if (!message.isEmpty()) {
-            new ServerConnect(true, message, socket).execute();
+            new SendToServer(true, message, socket).execute();
         } else {
             Toast.makeText(getApplicationContext(), "You cannot send empty msg", Toast.LENGTH_SHORT).show();
         }
         messageBox.setText("");
 
-        getApplicationContext().startService(recive);
+        getApplicationContext().startService(receiveMSG);
     }
 
 
@@ -142,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onResume() {
         super.onResume();
-        startService(recive);
+        startService(receiveMSG);
         registerReceiver(broadcastReceiver, new IntentFilter(ServerReceive.BROADCAST_ACTION));
         BackgroundHandler.activityResumed();
         messageView.setAdapter(messageAdapter);
@@ -161,8 +156,6 @@ public class MainActivity extends AppCompatActivity {
     private void onReceiveMessage(Intent intent) {
         String date = dateFormat.format(Calendar.getInstance().getTime());
         message = intent.getStringExtra("message");
-        messageFromIntent = new String[2];
-        messageFromIntent = message.split(" ", 2);
         Message tempMessage;
         tempMessage = new Message("Nick", message,date);
         messageList.add(tempMessage);
@@ -172,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Receiving message from ServerReceive class
-    private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
+    private final BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             onReceiveMessage(intent);

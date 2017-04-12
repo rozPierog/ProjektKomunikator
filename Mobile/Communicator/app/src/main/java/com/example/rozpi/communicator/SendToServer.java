@@ -11,16 +11,17 @@ import java.net.Socket;
 
 /**
  * Created by Marcin Omelan on 26.03.2017.
+ * Sending properly formatted message according to API
  */
 
-class ServerConnect extends AsyncTask<String, Void, Void> {
+class SendToServer extends AsyncTask<String, Void, Void> {
 
 
     private Socket client;
     private String toServer;
     private Boolean message;
 
-     ServerConnect(Boolean message, String toServer, Socket client) {
+     SendToServer(Boolean message, String toServer, Socket client) {
          this.message = message;
          this.toServer = toServer;
          this.client = client;
@@ -37,9 +38,9 @@ class ServerConnect extends AsyncTask<String, Void, Void> {
                     new OutputStreamWriter(client.getOutputStream())),
                     true);
             if(message)
-                out.println(SocketHandler.getNick() +" "+ toServer);
+                out.println("MSG{"+toServer+"}");
             else
-                out.println("LOGIN "+ toServer);
+                out.println("Hello, @{"+toServer+"}");
             Log.e("SOCKET", "Success");
         } catch (IOException e) {
             e.printStackTrace();

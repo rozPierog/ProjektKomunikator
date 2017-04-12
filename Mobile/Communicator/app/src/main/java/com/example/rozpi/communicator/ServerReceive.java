@@ -9,21 +9,18 @@ import android.util.Log;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.PrintWriter;
 import java.net.Socket;
 
 /**
- * Created by rozpi on 27.03.2017.
+ * Created by Marcin Omelan on 27.03.2017.
+ * Receiving message from echos from server
  */
 
 public class ServerReceive extends IntentService {
 
-    private static final String TAG ="ServerRecive";
     public static final String BROADCAST_ACTION = "com.example.rozpie.serverrevice.displayevent";
-    Socket socket;
     private final Handler handler = new Handler();
-    String message;
-    Intent intent;
+    private Intent intent;
 
     /**
      * Creates an IntentService.  Invoked by your subclass's constructor.
@@ -41,7 +38,7 @@ public class ServerReceive extends IntentService {
 
 
 
-    private Runnable sendUpdatesToUI = new Runnable() {
+    private final Runnable sendUpdatesToUI = new Runnable() {
         @Override
         public void run() {
             checkForMessage();
@@ -50,13 +47,12 @@ public class ServerReceive extends IntentService {
 
 
     private void checkForMessage() {
-        socket = SocketHandler.getSocket();
-        PrintWriter out;
+        Socket socket = SocketHandler.getSocket();
         BufferedReader networkIn;
         try {
             networkIn = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            while(true) {
-                message = networkIn.readLine();
+            while(socket.isConnected()) {
+                String message = networkIn.readLine();
                 Log.i("Echo", "Connected");
                 Log.i("Echo read", message);
                 if (message != null){

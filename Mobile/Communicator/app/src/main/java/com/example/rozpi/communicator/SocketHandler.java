@@ -4,10 +4,11 @@ import java.net.Socket;
 
 /**
  * Created by Marcin Omelan on 27.03.2017.
+ * Class that allows me to get socket and user nick in any place in the app.
  */
 
 class SocketHandler {
-    private static String nick = "10.0.2.2";
+    private static String nick;
     private static Socket socket;
 
     static String getNick() {
