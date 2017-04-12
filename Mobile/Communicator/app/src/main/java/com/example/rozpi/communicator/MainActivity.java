@@ -95,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    //Long press menu
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
@@ -105,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
         menu.add(Menu.NONE, v.getId(), 0, R.string.delete);
     }
 
+    //Long press menu functionality
     @Override
     public boolean onContextItemSelected(MenuItem item) {
         AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo)item.getMenuInfo();
@@ -136,6 +138,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    //Resuming app from memory
     @Override
     public void onResume() {
         super.onResume();
@@ -147,6 +150,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //Pausing app in the background
     @Override
     public void onPause() {
         super.onPause();
@@ -164,9 +168,10 @@ public class MainActivity extends AppCompatActivity {
         messageList.add(tempMessage);
         messageAdapter.notifyDataSetChanged();
         scrollMyListViewToBottom();
-        sendNotif(message);
+        sendNotification(message);
     }
 
+    //Receiving message from ServerReceive class
     private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -184,7 +189,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void sendNotif(String nameMessage) {
+    public void sendNotification(String nameMessage) {
         NotificationCompat.Builder mBuilder =
                 new NotificationCompat.Builder(this)
                         .setSmallIcon(R.drawable.notif_icon)
