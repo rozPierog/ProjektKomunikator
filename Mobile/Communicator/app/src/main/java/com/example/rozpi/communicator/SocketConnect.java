@@ -7,13 +7,14 @@ import java.net.InetAddress;
 import java.net.Socket;
 
 /**
- * Created by rozpi on 27.03.2017.
+ * Created by Marcin Omelan on 27.03.2017.
+ * Connecting to Server Sockets
  */
 
 class SocketConnect extends AsyncTask<Void, Void, Void> {
 
-    private String serverIP = "52.57.45.43";
-    private Integer serverPort = 6666;
+    private final String serverIP = "52.57.45.43";
+    private final Integer serverPort = 6666;
     private Socket client;
 
     @Override

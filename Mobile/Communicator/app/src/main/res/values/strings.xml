@@ -2,26 +2,18 @@
     <string name="app_name">Communicator</string>
     <string name="sendButton">Send!</string>
     <string name="messageBox">Message</string>
-    <string name="title_activity_login">Sign in</string>
     <string name="copy">Copy</string>
     <string name="delete">Delete</string>
     <string name="copied">Copied</string>
     <string name="deleted">Deleted</string>
-    <string name="copy_label">Copied From List</string>
     <string name="no_nick">You Must Have a Nickname</string>
     <string name="timestamp">Timestamp</string>
-    <string name="sender_name">Nick</string>
     <string name="message">Message</string>
     <string name="nick_space">No Spaces in Nick!</string>
 
 
     <!-- Strings related to login -->
     <string name="prompt_email">Nick</string>
-    <string name="prompt_password">Password (optional)</string>
     <string name="action_sign_in">Sing In</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-
-    <string name="action_settings">Settings</string>
 </resources>

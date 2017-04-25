@@ -18,13 +18,8 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
-    EditText etNick;
-    Intent loginIntent;
-    Context context;
-    SharedPreferences sharedPreferences;
-    Socket socket;
-    String nick;
-
+    private EditText etNick;
+    private SharedPreferences sharedPreferences;
 
 
     @Override
@@ -32,7 +27,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         etNick  = (EditText)findViewById(R.id.etNick);
-        context = LoginActivity.this.getApplicationContext();
+        Context context = LoginActivity.this.getApplicationContext();
         sharedPreferences = context.getSharedPreferences("Nick",Context.MODE_PRIVATE);
         String nick = sharedPreferences.getString("Nick", "");
         Log.w("Preferences", nick);
@@ -49,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
     public void onLogin(View v) {
         if(SocketHandler.getSocket()!=null)
         {
-            nick = etNick.getText().toString();
+            String nick = etNick.getText().toString();
 
             if (nick.isEmpty()) {
                 Toast.makeText(LoginActivity.this, R.string.no_nick, Toast.LENGTH_SHORT).show();
@@ -57,15 +52,15 @@ public class LoginActivity extends AppCompatActivity {
                 if (nick.contains(" ")) {
                     Toast.makeText(LoginActivity.this, R.string.nick_space, Toast.LENGTH_SHORT).show();
                 } else {
-                    loginIntent = new Intent(LoginActivity.this, MainActivity.class);
+                    Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
                     loginIntent.putExtra(NICK, nick);
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putString("Nick", nick);
                     editor.apply();
                     Log.w("SharedPref", nick);
 
-                    socket = SocketHandler.getSocket();
-                    new ServerConnect(false, nick, socket).execute();
+                    Socket socket = SocketHandler.getSocket();
+                    new SendToServer(false, nick, socket).execute();
                     startActivity(loginIntent);
                 }
             }
